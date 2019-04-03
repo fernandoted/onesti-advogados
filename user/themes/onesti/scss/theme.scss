@@ -1,0 +1,81 @@
+// Core variables and mixins
+@import 'spectre/variables';
+@import 'spectre/mixins';
+
+@import 'theme/variables';
+@import 'theme/mixins';
+@import 'theme/framework';
+@import 'theme/typography';
+@import 'theme/forms';
+@import 'theme/mobile';
+@import 'theme/animation';
+
+@import 'theme/header';
+@import 'theme/footer';
+@import 'theme/menu';
+
+// Extra Skeleton Styling
+@import 'theme/blog';
+@import 'theme/onepage';
+
+// specific
+@import 'theme/banner';
+@import 'theme/grid';
+// @import 'theme/scroll';
+@import 'theme/title-header';
+@import 'theme/images';
+@import 'theme/horizontal-scroll-flip';
+@import 'theme/carousel';
+
+body, html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body, html {
+    height: 100%;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+// #missao
+#visao, #politica,
+#inovacao, #qualidade, #cliente,
+#clareza, #independencia, #colaboracao,
+#bono, #diversidade, #carreira,
+#profissional, #parceiros, #tecnologia,
+// formacao
+#formacao, #hora, #consultoria,
+#contencioso, #crises,
+// atuação
+#aeronautico, #compliance, #consumidor,
+#contratos, #family, #fusoes, #penal,
+#intelectual, #conflitos, #societario,
+#trabalhista, #tributario {
+    display: none;
+}
+.accordion-body {
+    display: none;
+}
+.accordion:first-child > .accordion__item > .accordion-header {
+    border-bottom: 1px solid transparent;
+}
+
+@media (min-width: 480px) {
+
+}
+
+// @media (min-width: 768px) {
+//     
+// }
+
+// @media (min-width: 992px) {
+//     
+// }
+
+@media (min-width: 1200px) {
+    
+}

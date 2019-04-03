@@ -1,0 +1,390 @@
+html {
+  @include fluid-type($size-xs, $size-xl, $min-responsive-font-size, $html-font-size);
+}
+body {
+  font-size: 16px;
+}
+// FONT FAMILIES
+// medium
+@font-face {
+	font-family: Helvetica_Neue_Medium;
+	src: url('./../fonts/HelveticaNeueMedium.ttf');
+}
+// medium condensed
+@font-face {
+	font-family: Helvetica_Neue_Medium_Condensed;
+	src: url('./../fonts/HelveticaNeue-MediumCond.otf');
+}
+// light
+@font-face {
+	font-family: Helvetica_Neue_Light;
+	src: url('./../fonts/HelveticaNeueLight.ttf');
+}
+// ultra light condensed
+@font-face {
+	font-family: Helvetica_Neue_Ultra_Light_Condensed;
+	src: url('./../fonts/HelveticaNeue-UltraLigCond.otf');
+}
+// thin condensed
+@font-face {
+	font-family: Helvetica_Neue_Thin_Condensed;
+	src: url('./../fonts/HelveticaNeue-ThinCond.otf');
+}
+@font-face {
+	font-family: Helvetica_Neue_Thin;
+	src: url('./../fonts/HelveticaNeue-Thin.otf');
+}
+// heavy
+@font-face {
+	font-family: Helvetica_Neue_Heavy;
+	src: url('./../fonts/HelveticaNeue-Heavy.otf');
+}
+// heavy condensed
+@font-face {
+	font-family: Helvetica_Neue_Heavy_Condensed;
+	src: url('./../fonts/HelveticaNeue-HeavyCond.otf');
+}
+// condensed
+@font-face {
+	font-family: Helvetica_Neue_Condensed;
+	src: url('./../fonts/HelveticaNeue-Condensed.otf');
+}
+// black condensed
+@font-face {
+	font-family: Helvetica_Neue_Black_Condensed;
+	src: url('./../fonts/HelveticaNeue-BlackCond.otf');
+}
+// ultra light
+@font-face {
+	font-family: Helvetica_Neue_Ultra_Light;
+	src: url('./../fonts/HelveticaNeueUltraLight.ttf');
+}
+p {
+	// font-family: Helvetica_Neue_Light;
+	font-family: Helvetica_Neue_Thin;
+	color: $text-white-bg;
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+// Header Overrides
+h1, h2, h3, h4, h5, h6 {
+  	margin-top: 2rem;
+  	font-family: $title-font-family;
+  	color: darken($body-font-color, 10%);
+}
+h1, .h1 {
+  	font-size: 3rem;
+}
+h2, .h2 {
+  	font-size: 1.8rem;
+}
+h6, .h6 {
+  	font-weight: 400;
+}
+.title-center {
+  	h1, h2 {
+    	text-align: center;
+  	}
+}
+.introTxt {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.titleContainer {
+	padding: 60px 15px;
+	width: 100%;
+  .titleSection-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+      .squareTitle {
+			color: #d8306a;
+			font-size: 14px;
+			margin-right: 15px;
+      }
+  }
+}
+// first title below the banner
+.title-center {
+	#start {
+    	h2 {
+			margin-top: 0;
+			margin-bottom: 10px;
+      		font-size: 2rem;
+		}
+		.titleCompl-wrapper {
+			text-align: center;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			p {
+				max-width: 800px;
+			}
+    }
+  }
+}
+.titleCompl {
+	text-align: center;
+	font-weight: 100;
+	width: 100%;
+	margin-bottom: 0;
+}
+.subTitleLine {
+	margin-top: 0;
+	width: 400px;
+	max-width: 260px;
+	height: 1px;
+	border: 0;
+	background-image: linear-gradient(90deg, transparent, #D8306A, transparent);
+}
+h3 {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 100;
+	margin-top: 0;
+	margin-bottom: 0;
+	span {
+		font-family: Helvetica_Neue_Medium_Condensed;
+	}
+}
+
+.title-h1h2 {
+  h1  {
+    font-weight: 100;
+    margin-bottom: 0;
+    line-height: 1.1;
+
+    strong, bold {
+      font-weight: 400;
+    }
+  }
+  h1 + h2 {
+    line-height: 1.1;
+    margin-top: 0;
+  }
+
+}
+/* specifics aligments by sections */
+// VEMOS
+#vemos {
+  .splitTitle {
+    padding-bottom: 40px;
+    .titleContainer {
+      padding-left: 40px;
+      .titleSection-wrapper {
+        text-align: left;
+        h3 {
+          color: $text-dark-bg;
+        }
+      }
+    }
+  }
+}
+#vemos p, #praticamos p {
+  color: #efefef;
+  font-weight: 100;
+}
+// TEMOS
+#temos {
+	.subTitleLine {
+		margin-left: 0;
+	}
+	.header {
+		.title-wrapper {
+			.titleIcon {
+				margin-right: 10px;
+			}
+		}
+		.subtitle {
+			margin-left: 34px;
+		}
+	}
+}
+// SOLUCOES
+#solucoes {
+	.introTxt {
+		width: 100%;
+	}
+}
+// ATUACAO
+#atuacao {
+	.introTxt {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+}
+#depoimentos {
+	p, small {
+			color: #FFF;
+	}
+}
+// Typography Hints
+.title-h1h2, .title-center {
+  h1 + h2 {
+    margin-bottom: 50px;
+    font-weight: 700;
+  }
+}
+
+a:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+// Codeblocks
+pre code, pre.xdebug-var-dump{
+  background: #fafafa;
+  display: block;
+  padding: 1rem !important;
+  line-height: 1.5;
+  color: inherit;
+  border-radius: 2px;
+  overflow-x: auto;
+}
+
+pre {
+  code:not(.hljs) {
+    background: #f8f8f8;
+  }
+}
+
+// Icon Tweaks
+i.fa {
+
+
+  &.fa-heart, &.fa-heart-o {
+    &.pulse {
+      color: #920
+    }
+  }
+}
+
+// Font Weights
+b,
+strong {
+  font-weight: 700;
+}
+
+.heavy {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 200;
+}
+
+// Colors
+.text-light {
+  color: rgba($light-color, 0.8);
+
+  h1, h2, h3, h4, h5, h6 {
+    color: rgba($light-color, 0.9);
+  }
+}
+
+// Error configuration
+#error {
+  text-align: center;
+  position: relative;
+  margin-top: 5rem;
+
+  .icon {
+    font-size: 50px;
+  }
+}
+
+// Messages
+#messages {
+  margin-bottom: 1rem;
+
+  .icon {
+    font-size: 1rem;
+  }
+}
+
+// Lists
+ul,
+ol {
+  margin-left: $unit-8;
+
+  ul,
+  ol {
+    margin-left: $unit-8;
+  }
+}
+
+ul {
+  list-style: disc outside;
+}
+
+ol {
+  list-style: decimal outside;
+}
+
+// Notices
+.notices {
+  margin: 1.5rem 0;
+  p {
+    margin: 1rem 0;
+  }
+}
+
+@media (min-width: 480px) {
+	.subTitleLine {
+		max-width: 300px;
+	}
+}
+
+@media (min-width: 768px) {
+	.title-center {
+		#start {
+			h2 {
+				font-size: 3rem;
+			}
+		}
+	}
+	h3 {
+		font-size: 2.5rem;
+	}
+	.introTxt {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.titleContainer {
+		padding: 60px 0;
+	}
+	#cases {
+		.titleContainer {
+			padding-bottom: 0;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: space-between;
+			.language {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.subTitleLine {
+		max-width: 400px;
+	}
+	// SOLUCOES
+	#solucoes {
+		.introTxt {
+			width: 40%;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	
+}

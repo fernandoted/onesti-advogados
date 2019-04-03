@@ -1,0 +1,84 @@
+#depoimentos {
+    height: 600px;
+    padding: 40px 0;
+    background: url(/onesti-proj/user/themes/onesti/images/praticamos-black.jpg);
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    h3 {
+        color: #FFF;
+    }
+    .titleCompl {
+        color: #FFF;
+        font-weight: 100;
+    }
+    // .carousel {
+    .slider {
+        height: 310px;
+        .bannerImg-container {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .border-container {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 1px solid #D8306A;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .roundImg-wrapper {
+                    width: 85px;
+                    height: 85px;
+                    border-radius: 50%;
+                    img {
+                        border-radius: 50%;
+                    } 
+                }
+            }
+            p {
+                font-size: .8rem;
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    #depoimentos {
+        height: 500px;
+        .carousel {
+            height: 450px;
+        }
+    }
+}
+@media (min-width: 768px) {   
+    #depoimentos {
+        height: 450px;
+        .carousel {
+            height: 400px;
+        }
+    }
+}
+// @media (min-width: 992px) {
+//    
+// }
+@media (min-width: 1200px) {
+    #depoimentos {
+        height: 400px;
+        padding: 40px 0;
+        background-position: 0 -280px;
+        .carousel {
+            height: 350px;
+            .bannerImg-container {
+                width: 60%;
+            }
+        }
+    }
+}

@@ -1,0 +1,268 @@
+// columns blocks
+#body-wrapper {
+	.container {
+		.block-cols {
+			display: flex;
+			flex-wrap: wrap;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+.col-half, .col-third {
+	width: 100%;
+}
+.col-4 {
+	padding: $padding-center;
+}
+.introSection-content {
+	width: 100%;
+	padding-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.halfImg-wrapper, .halfText-intro {
+		width: 100%;
+	}
+}
+
+// specific section
+// PRATICAMOS
+body {
+	#body-wrapper {
+		#praticamos {
+			.container {
+				padding-top: 40px;
+				padding-bottom: 0;
+				display: flex;
+				flex-wrap: wrap;
+				.col-half {
+					padding-left: 0;
+				}
+			}
+			.block-cols {
+				padding: 40px 15px;
+			}
+		}
+	}
+}
+// TEMOS
+#temos {
+	.splitTitle {
+		padding: 60px 0;
+	}
+}
+
+// SOLUCOES
+#solucoes {
+	.solucoesContent-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		.solucoesItems-wrapper {
+			width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+#viemos, #temos, #solucoes, #vivemos {
+	background: #f4f4f4;
+	width: 100%;
+}
+// VIVEMOS
+#vivemos {
+	padding-top: 40px;
+	.titleContainer {
+		padding-top: 10px;
+	}
+}
+// ESTIVEMOS
+#estivemos {
+	h3 {
+		text-align: left;
+	}
+	.titleCompl {
+		text-align: left;
+	}
+}
+// VEMOS
+#vemos {
+		background: #4D4D4D;
+	padding-top: 60px;
+	.splitTitle {
+		width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				.titleImg, .titleContainer {
+				width: 100%;
+		}
+	}
+}
+
+// ATUACAO
+#atuacao {
+	.atuacaoTabs {
+		padding-left: 15px;
+		padding-right: 15px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+// CASES
+#cases {
+	.clientesLogo-container {
+		padding-bottom: 10px;
+		.clientesLogo-row {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			.clientLogo {
+				width: 100%;
+				padding: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				img {
+					width: 40%;
+					height: 40%;
+				}
+				&:last-child {
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+	.col-half {
+		width: 50%;
+	}
+	.col-third {
+		width: 33.33%;
+	}
+	.col-half:first-child, .col-6:first-child, .col-4:first-child, .col-4:nth-child(4) {
+		padding-right: 20px;
+		box-sizing: border-box;
+	}
+	.col-half:nth-child(2), .col-6:nth-child(2) {
+		padding-left: 20px;
+		box-sizing: border-box;
+	}
+	.col-half:last-child, .col-6:last-child, .col-4:last-child, .col-4:nth-child(6) {
+		padding-left: 20px;
+	}
+	.introSection-content {
+		.halfImg-wrapper, .halfText-intro {
+			width: 50%;
+		}
+	}
+	#vemos {
+		.splitTitle {
+				.titleImg, .titleContainer {
+				width: 50%;
+			}
+		}
+	}
+	// praticamos
+	body {
+		#body-wrapper {
+			#praticamos {
+				.container {
+					.col-half {
+						&:nth-child(2) {
+							padding-left: 20px;
+							border-left: 1px solid $theme-color;
+						}
+					}
+				}
+			}
+		}
+	}
+	// cases
+	#cases {
+		.clientesLogo-container {
+			.clientesLogo-row {
+				.clientLogo {
+					width: 33%;
+					img {
+						width: 100%;
+						height: 100%;
+						// filter: grayscale(100%);
+						// opacity: .7;
+						// transition: .1s ease-in-out;
+						// &:hover {
+						// 	filter: grayscale(0);
+						// 	opacity: 1;
+						// }
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	#body-wrapper {
+		.container {
+			.block-cols {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+	body {
+		#body-wrapper {
+			#praticamos {
+				.block-cols {
+					padding: 40px 0;
+				}
+			}
+		}
+	}
+	// SOLUCOES
+	#solucoes {
+		.solucoesContent-wrapper {
+			justify-content: space-between;
+			.introTxt {
+				padding-right: 80px;
+			}
+			.accordion {
+				width: 60%;
+			}
+		}
+	}
+	// ATUAÇÃO
+	#atuacao {
+		.atuacaoTabs {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	// cases
+	#cases {
+		.clientesLogo-container {
+			padding-top: 40px;
+			.clientesLogo-row {
+				.clientLogo {
+					width: 20%;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	
+}

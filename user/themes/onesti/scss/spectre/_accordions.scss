@@ -1,0 +1,142 @@
+.accordion {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.showBtn {
+	display: block;
+}
+.accordion-header {
+	cursor: pointer;
+	.title {
+		font-weight: 100;
+		font-size: 1.1rem;
+		margin: 0 10px 0 0;
+		display: flex;
+		align-items: center;
+		.titleIcon {
+			width: 22px;
+			color: #D8306A;
+			font-size: 1.2rem;
+			margin-left: 10px;
+		}
+	}
+	.subtitle {
+		color: #D8306A;
+	}	
+}
+#solucoes {
+	.js-accordion-item {
+		width: 100%;
+		margin-bottom: 20px;
+		.accordion-header {
+			.title {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				h4 {
+					margin: 0;
+				}
+			}
+		}
+		p {
+			margin-top: 10px;
+		}
+	}
+}
+#atuacao {
+	.js-accordion-item {
+		margin-bottom: 20px;
+		.accordion-header {
+			.title {
+				.titleIcon {
+					margin-left: 0;
+					margin-right: 10px;
+				}
+			}
+		}
+		p {
+			margin: 10px 0 10px 35px;
+		}
+		.subtitle {
+			color: #D8306A;
+		}
+	}
+}
+// #pensamos, #vivemos,
+#praticamos,
+#temos {
+    .header {
+        .title-wrapper {
+			cursor: pointer;
+			text-decoration: none;
+            display: flex;
+            flex-wrap: wrap;
+			align-items: center;
+			.titleIcon {
+				margin-right: 10px;
+				color: #D8306A;
+                font-size: 1rem;
+			}
+            .title {
+                font-weight: 100;
+                font-size: 1rem;
+				margin: 0 10px 0 0;
+			}
+			.subtitle {
+				width: 100%;
+				color: #D8306A;
+				margin-left: 27px;
+			}
+        }
+    }
+}
+#praticamos {
+	.header {
+		.title-wrapper {
+			.title {
+				color: #EFEFEF;
+			}
+		}
+	}
+}
+#temos {
+	.header {
+		.title-wrapper {
+			.title {
+				color: #3A414E;
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) {
+	#praticamos, #temos {
+    	.header {
+        	.title-wrapper {
+				.titleIcon {
+                	font-size: 1.2rem;
+				}
+				.title {
+					font-weight: 100;
+					font-size: 1.4rem;
+				}
+				.subtitle {
+					margin-left: 35px;
+				}
+			}
+		}
+	}
+}
+
+// @media (min-width: 768px) {
+//     
+// }
+
+// @media (min-width: 992px) {
+//     
+// }
+
+// @media (min-width: 1200px) {
+//     
+// }

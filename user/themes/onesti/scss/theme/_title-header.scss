@@ -1,0 +1,243 @@
+// first section title
+.header-fixed #body-wrapper {
+    padding-top: 2rem;
+}
+
+.titleCompl-wrapper {
+    padding-left: 15px;
+	padding-right: 15px;
+}
+
+#praticamos {
+    background: #353535;
+    .titleContainer {
+        background: url(/onesti-proj/user/themes/onesti/images/praticamos-black.jpg);
+        background-size: cover;
+        background-position: 0 -280px;
+        background-repeat: no-repeat;
+        h3 {
+            color: #FFF;
+        }
+        .titleCompl {
+            color: #FFF;
+            font-weight: 100;
+        }
+    }
+    .container {
+        color: #838383;
+    }
+}
+
+.splitTitle {
+    display: flex;
+    flex-wrap: wrap;
+    .titleImg {
+        width: 50%;
+    }
+    .titleSection-wrapper {
+        // width: 50%;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    .titleCompl {
+        text-align: center;
+        // margin-left: 30px;
+    }
+}
+
+// specific sections
+// PENSAMOS
+h4.title a {
+    color: #4D4D4D;
+}
+
+// TEMOS
+#temos {
+    .splitTitle {
+        .titleContainer, .titleImg {
+            width: 100%;
+        }
+    }
+}
+// ESTIVEMOS
+#estivemos {
+    .titleSection-wrapper {
+      justify-content: flex-start;
+    }
+    .subTitleLine {
+        margin-left: 0;
+    }
+}
+// VEMOS
+#vemos {
+    .titleImg {
+        background: url(/onesti-proj/user/themes/onesti/images/vemos-red.jpg);
+        padding-right: 30px;
+        border-right: 5px solid #D8306A;
+        background-position: -90px 0;
+        background-repeat: no-repeat;
+    }
+}
+// SOLUCOES
+#solucoes {
+    .splitTitle {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 60px 0;
+        .titleContainer {
+            width: 100%;
+            .titleSection-wrapper {
+                justify-content: flex-start;
+                align-items: center;
+                .title-wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+            }
+        }
+        .introImg-container {
+            width: 100%;
+        }
+    }
+}
+.solucoesItem {
+    margin-bottom: 20px;
+    .title-wrapper {
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .iconImg-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        h5 {
+            margin: 0;
+        }
+    }
+}
+
+// ATUACAO
+#atuacao {
+    .titleContainer {
+        h3 {
+            color: #FFF;
+        }
+        .titleCompl {
+            // color: #3a414e;
+            color: #FFF;
+        }
+    }
+}
+.atuacaoTabs {
+    .title-wrapper {
+        text-decoration: none;
+        cursor: pointer;
+        margin-bottom: 20PX;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        h4 {
+            font-weight: 100;
+            font-size: 1.1rem;
+            margin: 0 10px 0 0;
+        }
+        .titleIcon {
+            color: #D8306A;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+    }
+}
+// CASES DE SUCESSO
+#cases {
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 0;
+		.titleContainer {
+			// padding-left: 40px;
+			width: 100%;
+			.titleSection-wrapper {
+				justify-content: flex-start;
+			}
+			.subTitleLine {
+				margin-left: 0;
+			}
+			.titleCompl {
+				text-align: center;
+				margin-left: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+    // SOLUCOES
+    #solucoes {
+        .splitTitle {
+            .titleContainer {
+                width: 55%;
+            }
+            .introImg-container {
+                width: 45%;
+            }
+        }
+    }
+    #cases {
+        .container {
+            .titleContainer {
+                width: 75%;
+                padding-left: 40px;
+                .titleCompl {
+                    text-align: left;
+                    margin-left: 30px;
+                }
+                p {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+    .splitTitle {
+        .titleCompl {
+            text-align: left;
+            margin-left: 30px;
+        }
+    }
+    #estivemos {
+        .titleCompl {
+            margin-left: 30px;
+        }
+    }
+    #temos {
+        .splitTitle {
+            .titleContainer, .titleImg {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+	.header-fixed #body-wrapper {
+        padding-top: 4rem;
+    }
+    .titleCompl-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+	
+}

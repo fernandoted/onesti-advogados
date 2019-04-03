@@ -1,0 +1,144 @@
+
+#header {
+  width: 100%;
+  height: $header-height-large;
+  @extend .default-animation;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+
+  background: $light-color;
+  color: $dark-color;
+
+  .logo svg path {
+    fill: $header-color-dark;
+  }
+.languageItem {
+	ul {
+		li {
+			a {
+				color: rgba(255,255,255,.8);
+				text-decoration: none;
+				&:hover {
+					color: rgba(255,255,255,1);
+				}
+			}
+		}
+	}
+}
+		
+
+  .header-dark &:not(.scrolled) {
+    background: $header-color-dark;
+    color: $light-color;
+    a {
+      color: rgba($light-color, 0.7) !important;
+    }
+    a.active {
+      color: $light-color !important;
+    }
+    .dropmenu ul ul a {
+        color: $dark-color !important;
+    }
+    .logo svg path {
+      fill: $light-color;
+    }
+  }
+
+  .header-dark.header-transparent &:not(.scrolled) {
+    background: rgba(#000, 0.05);
+  }
+
+  .header-transparent &:not(.scrolled) {
+    background: rgba(#fff, 0.05);
+    //border-bottom: 0 !important;
+  }
+
+  .navbar-section {
+	  justify-content: space-between;
+    height: $header-height-large;
+    @extend .default-animation;
+
+    @include breakpoint(md) {
+      margin-right: 2rem;
+    }
+  }
+
+  .navbar-section.desktop-menu {
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+.navbar-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+  .logo {
+    svg, img {
+      height: 70px;
+      display: inherit;
+      @extend .default-animation;
+    }
+  }
+
+  // Fixed Header solution
+  .header-fixed & {
+    position: fixed;
+    top: 0;
+	z-index: 2;
+	background-color: transparent;
+	// background-color: rgba(0,0,0,.7);
+  }
+}
+
+// Animate Fixed Header
+body.header-fixed.header-animated {
+  #header.scrolled {
+    height: $header-height-small;
+    background: rgba(0,0,0,.8);
+
+    .navbar-section {
+      height: $header-height-small;
+    }
+
+    .logo {
+      svg, img {
+        height: 28px;
+      }
+    }
+
+    ~ .mobile-menu .button_container {
+      top: 0.5rem;
+    }
+  }
+}
+
+.login-status-wrapper {
+  white-space: nowrap;
+}
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+	
+}
+
+@media (min-width: 992px) {
+	.topbarInner {
+		width: 976px;
+	}
+	.header-fixed {
+		#header {
+			background-color: rgba(0,0,0,0);
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.topbarInner {
+		width: 1100px;
+	}
+}

@@ -1,0 +1,11 @@
+email: fernandoted@icloud.com
+fullname: 'fernando martins lucas'
+title: administrator
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$zYGf2aJFNZITAUmdDSp16.aOs7TyNPiSNtIPxzaESCw/zY9zFmkba

@@ -1,0 +1,137 @@
+#vivemos, #solucoes {
+    .introImg-container {
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .externalCircle {
+            background-color: $theme-color;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 245px;
+            height:245px;
+            .introImg-wrapper {
+                background-color: $theme-color;
+                border-radius: 50%;
+                width: 230px;
+                height: 230px;
+                border: 5px solid #FFF;
+            }
+        }
+    }
+}
+#pensamos {
+    .halfImg-wrapper {
+        height: 200px;
+        background: url(/onesti-proj/user/themes/onesti/images/vivemos-red.jpg);
+        background-repeat: no-repeat;
+        background-position: -60px 0;
+        background-size: cover;
+    }
+}
+#solucoes {
+    .introImg-container {
+        justify-content: center;
+        .externalCircle {
+            .introImg-wrapper {
+                background: url(/onesti-proj/user/themes/onesti/images/solucoes-red.jpg);
+                background-repeat: no-repeat;
+                background-position: -60px 0;
+            }
+        }
+    }
+}
+#vivemos {
+    .introImg-container {
+        justify-content: center;
+        .externalCircle {
+            .introImg-wrapper {
+                background: url(/onesti-proj/user/themes/onesti/images/vivemos-red.jpg);
+                background-repeat: no-repeat;
+                background-position: -100px 0;
+            }
+        }
+    }
+}
+#temos {
+    .titleImg {
+        background: url(/onesti-proj/user/themes/onesti/images/vivemos-red.jpg);
+        background-repeat: no-repeat;
+        // background-position: -100px 0;
+    }
+}
+#atuacao {
+    .titleContainer {
+        background: url(/onesti-proj/user/themes/onesti/images/atuacao-gray.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        // background-position: -100px 0;
+    }
+}
+#cases {
+    .introImg-container {
+        background: url(/onesti-proj/user/themes/onesti/images/cases-gray.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -130px 0;
+    }
+}
+.accordion {
+    .accordion-header {
+        .iconImg-wrapper {
+            width: 28px;
+            margin-right: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+// #cases {
+//     .introImg-container {
+//         width: 100%;
+//         background: #EFEFEF;
+//     }
+// }
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+    #cases {
+        .introImg-container {
+            width: 25%;
+        }
+    }
+    #vivemos, #solucoes {
+        .introImg-container {
+            .externalCircle {
+                width: 315px;
+                height: 315px;
+                .introImg-wrapper {
+                    width: 300px;
+                    height: 300px;
+                    // border: 5px solid #FFF;
+                }
+            }
+        }
+    }
+    #vivemos {
+        .introImg-container {
+            justify-content: center;
+        }
+    }
+    #solucoes {
+        .introImg-container {
+            justify-content: flex-start;
+        }
+    }
+}
+

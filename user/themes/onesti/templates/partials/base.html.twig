@@ -1,0 +1,157 @@
+{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
+{% set grid_size = theme_var('grid-size') %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    {# <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title> #}
+    <title>Onesti Advogados</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' %}
+
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+    {# <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> #}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    {# <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> #}
+
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
+        {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
+        {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
+        {% do assets.addCss('theme://css-compiled/theme'~compress) %}
+        {% do assets.addCss('theme://css/custom.css') %}
+        {% do assets.addCss('theme://css/line-awesome.min.css') %}
+        {% do assets.addCss('theme://css/slick-theme.css') %}
+        {% do assets.addCss('theme://css/slick.css') %}
+    {% endblock %}
+    {{ assets.css()|raw }}
+
+    {% block javascripts %}
+        {% do assets.addJs('jquery', 101) %}
+        {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/toggle_block.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/smooth-scroll.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/back-top.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/all-collapse.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/language.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/carousel-slide.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/header.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/slick-slide.js', {group:'bottom'}) %}
+    {% endblock %}
+    {{ assets.js()|raw }}
+
+{% endblock head %}
+</head>
+<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
+    <div id="page-wrapper">
+    {% block header %}
+        <section id="header" class="section">
+            {# <section class="container {{ grid_size }}"> #}
+            <section class="topbarInner">
+                <nav class="navbar">
+                    <section class="navbar-section logo">
+                        <div class="navbar-wrapper">
+                            {% include 'partials/logo.html.twig' %}
+                            <div class="menuIcon-wrapper">
+                                <i class="fas fa-bars" style="color: #FFF"></i>
+                                <nav class="dropmenu animated">
+                                {% block header_navigation %}
+                                    {% include 'partials/navigation.html.twig' %}
+                                {% endblock %}
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="languageItem">
+                            <ul>
+                                <li>
+                                    <a href="#">IDIOMA</a>
+                                    {# <ul>
+                                        <li>
+                                            <a>inglês</a>
+                                        </li>
+                                        <li>
+                                            <a>espanhol</a>
+                                        </li>
+                                    </ul> #}
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    {# <section class="navbar-section desktop-menu"> #}
+                        
+
+                        {# {% if config.plugins.login.enabled and grav.user.username %}
+                            <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
+                        {% endif %} #}
+
+                    {# </section> #}
+                </nav>
+            </section>
+        </section>
+        <div class="mobile-menu">
+            <div class="button_container" id="toggle">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block banner %}
+        {% include 'partials/banner.html.twig' %}
+    {% endblock %}
+
+    {% block hero %}{% endblock %}
+
+        <section id="start">
+        {% block body %}
+            <section id="body-wrapper" class="section">
+                {# <section class="container {{ grid_size }}"> #}
+                <section class="{{ grid_size }}">
+                    {# {% block messages %}
+                        {% include 'partials/messages.html.twig' ignore missing %}
+                    {% endblock %} #}
+                    {% block content %}{% endblock %}
+                </section>
+            </section>
+        {% endblock %}
+        </section>
+
+    </div>
+
+    {% block footer %}
+        {% include 'partials/footer.html.twig' %}
+    {% endblock %}
+    
+    <div class="mobile-container">
+        <div class="overlay" id="overlay">
+            <div class="mobile-logo">
+                {% include 'partials/logo.html.twig' with {mobile: true} %}
+            </div>
+            <nav class="overlay-menu">
+                {% include 'partials/navigation.html.twig' with {tree: true} %}
+            </nav>
+        </div>
+    </div>
+
+{% block bottom %}
+    {{ assets.js('bottom')|raw }}
+{% endblock %}
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js'></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="/onesti-proj/user/themes/onesti/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
